@@ -10,7 +10,7 @@
 
 ## Overview 
 
-Terraform to create an s3 bucket `theden-static-website` with the default_root_object `index.html` (as defined in `bucket_data/index.html`)g, and a CloudFront distribution with the bucket as its origin.
+Terraform to create an s3 bucket `theden-static-website` with the default_root_object `index.html` (as defined in `bucket_data/index.html`), and a CloudFront distribution with the bucket as its origin.
 
 ## Assumptions/Considerations
 
