@@ -6,7 +6,7 @@
 - [Setup](#setup)
 - [Deploy](#deploy)
 - [Test](#test)
-- [Improvements, Alternative Solutions, Productionising](#improvements-alternative-solutions-productionising)gi
+- [Improvements, Alternative Solutions, Productionising](#improvements-alternative-solutions-productionising)
 
 ## Overview 
 
