@@ -27,16 +27,22 @@ Terraform to create an s3 bucket `theden-static-website` with the default_root_o
 
 # Setup
 
-Initialise the working directory
+To initialise the working directory
 
 ```shell
 Terraform init
 ```
 
-To validate run 
+To validate 
 
 ```shell
 terraform validate
+```
+
+For debugging 
+
+```shell
+terraform console
 ```
 
 # Deploy
@@ -61,7 +67,7 @@ static_website_url = "https://d3w1hji9oouxbr.cloudfront.net"
 
 # Test
 
-The [Terratest](https://github.com/gruntwork-io/terratest/) library is used to test the terraform deployment and check if the CloudFront `index.html` endpoint returns `200`
+The [Terratest](https://github.com/gruntwork-io/terratest/) library is used to test the terraform deployment and check if the CloudFront `index.html` endpoint returns `gi200`
 
 To pull in the dependencies
 
