@@ -4,7 +4,6 @@
   * [Overview](#overview)
   * [Assumptions/Considerations](#assumptionsconsiderations)
 - [Setup](#setup)
-  * [Terraform](#terraform)
 - [Deploy](#deploy)
 - [Test](#test)
 - [Improvements, Alternative Solutions, Productionising](#improvements-alternative-solutions-productionising)
