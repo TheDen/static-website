@@ -26,7 +26,7 @@ jobs:
           exit $exitCode
 
   misspell:
-    name: check misspelling
+    name: Check Misspelling
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
