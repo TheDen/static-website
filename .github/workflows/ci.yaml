@@ -1,0 +1,38 @@
+name: CI
+
+on: [push]
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    name: Terraform Format
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform with specified version on the runner
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.3.9
+          terraform_wrapper: false
+
+      - name: Terraform fmt
+        id: fmt
+        run: |
+          tfFmtOutput="$(terraform fmt --recursive -check --list=true)" && exitCode=$? || exitCode=$?
+          if [ -n "${tfFmtOutput}" ]; then
+            echo -e "Need to run terraform fmt on these files \n \`\`\`\n${tfFmtOutput}\n\`\`\`" > $GITHUB_STEP_SUMMARY
+          fi
+          exit $exitCode
+
+  misspell:
+    name: chekc misspelling
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: misspell
+        uses: reviewdog/action-misspell@v1
+        with:
+          locale: "US"
+
