@@ -89,7 +89,7 @@ Potential improvements
 * Set up different environments with terraform, using terraform workspaces 
 * Manage the terraform state in S3 or elsewhere
 * `terraform plan` and `apply` via CI, and show diff in PR comments
-* Add more linters and static analysis tools in the CI, e.g., [tfsec](https://github.com/aquasecurity/tfsec), run `terraform validate`, [checkcov](https://github.com/bridgecrewio/checkov), [tflint](https://github.com/terraform-linters/tflint), run `go fmt`, 
+* Add more linters and static analysis tools in the CI, e.g., [tfsec](https://github.com/aquasecurity/tfsec), run `terraform validate`, [checkcov](https://github.com/bridgecrewio/checkov), [tflint](https://github.com/terraform-linters/tflint), check with `go fmt`
 * Add a `Makefile` for the go code (and potentially terraform)
 * Invalidate CloudFront cache (or specific path) on changes to the bucket data 
 * Add a `CODEOWNERS` file
