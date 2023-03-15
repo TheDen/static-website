@@ -1,6 +1,6 @@
-# Static S3 website
+# Static S3 Website
 
-- [Static S3 website](#static-s3-website)
+- [Static S3 Website](#static-s3-website)
   * [Overview](#overview)
   * [Assumptions/Considerations](#assumptionsconsiderations)
 - [Setup](#setup)
