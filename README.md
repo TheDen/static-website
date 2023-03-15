@@ -7,7 +7,7 @@
   * [Terraform](#terraform)
   * [Deploy](#deploy)
 - [Test](#test)
-- [Improvements, potential solutions, etc.](#improvements-potential-solutions-etc)
+- [Improvements, Alternative Solutions, Productionising](#improvements-alternative-solutions-productionising)
 
 ## Overview 
 
@@ -58,7 +58,7 @@ static_website_url = "https://d3w1hji9oouxbr.cloudfront.net"
 
 # Test
 
-The [Terratest](https://github.com/gruntwork-io/terratest/) library is used to test the terraform deployment and check if the CloudFront index.html endpoint returns 200
+The [Terratest](https://github.com/gruntwork-io/terratest/) library is used to test the terraform deployment and check if the CloudFront `index.html` endpoint returns `gi200`
 
 To pull in the dependencies
 
@@ -74,7 +74,7 @@ To run the tests, in the `test` folder run
 go test
 ```
 
-# Improvements, potential solutions, etc.
+# Improvements, Alternative Solutions, Productionising
 
 Potential improvements
  
@@ -89,20 +89,17 @@ Potential improvements
 Alternative solutions
 
 * Use buckets on Google Cloud, with Cloud DNS
-* Simplest solution would be to use GitHub pages to with a `gh-pages` branch for deployment, though you lose configurability wrt the CDN
+* Simplest solution would be to use GitHub pages to with a `gh-pages` branch for deployment, though you lose configurability with respect to the CDN configuration
 * Use AWS Amplify
 * Could use CloudFormation instead of terraform to build the infra
-* If a Kubernetes cluster already exists, with something like `ingress-nginx`
+* If a Kubernetes cluster already exists, it can be deployed with something like `ingress-nginx`
 
 Productionising
 
 * Use Route53 as a `CNAME` for CloudFront, and use `ACM`
-* Set up different environments
+* Set up different environments for the infrastructure, ideally isolated 
 * Configure CloudFront response header policy for what's required
 * Add encryption to buckets, and potentially versioning
-* Minify the static files prior to uploading to the bucket 
-
-
-
+* Minify the static files prior to uploading to the bucket
 
 
