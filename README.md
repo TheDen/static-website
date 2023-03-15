@@ -11,7 +11,7 @@
 
 ## Overview 
 
-Terraform to create an s3 bucket `theden-static-website` with the default_root_object `index.html` (as defined in `bucket_data/index.html, and a CloudFront distribution with the bucket as its origin.
+Terraform to create an s3 bucket `theden-static-website` with the default_root_object `index.html` (as defined in `bucket_data/index.html`), and a CloudFront distribution with the bucket as its origin.
 
 ## Assumptions/Considerations
 
@@ -81,8 +81,8 @@ Potential improvements
 * Set up different environments with terraform, using terraform workspaces 
 * Manage the terraform state in S3 or elsewhere
 * `terraform plan` and `apply` via CI, and show diff in PR comments
-* Add more linters and static analysis tools in the CI, e.g., [tfsec](https://github.com/aquasecurity/tfsec)
-* add a `Makefile` for the go code (and potentially terraform)
+* Add more linters and static analysis tools in the CI, e.g., [tfsec](https://github.com/aquasecurity/tfsec), run `terraform validate`, [checkcov](https://github.com/bridgecrewio/checkov), [tflint](https://github.com/terraform-linters/tflint), run `go fmt`, 
+* Add a `Makefile` for the go code (and potentially terraform)
 * Invalidate CloudFront cache (or specific path) on changes to the bucket data 
 * Add a `CODEOWNERS` file
 
@@ -101,5 +101,6 @@ Productionising
 * Configure CloudFront response header policy for what's required
 * Add encryption to buckets, and potentially versioning
 * Minify the static files prior to uploading to the bucket
+* Add GitHub branch protection and and potentially an approval process
 
 
