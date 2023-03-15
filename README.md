@@ -66,7 +66,7 @@ static_website_url = "https://d3w1hji9oouxbr.cloudfront.net"
 
 # Test
 
-The [Terratest](https://github.com/gruntwork-io/terratest/) library is used to test the terraform deployment and check if the CloudFront `index.html` endpoint returns `gi200`
+The [Terratest](https://github.com/gruntwork-io/terratest/) library is used to test the terraform deployment and check if the CloudFront `index.html` endpoint returns `200`
 
 To pull in the dependencies
 
